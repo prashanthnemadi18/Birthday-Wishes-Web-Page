@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply overflow-x-hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400;
+    animation: shimmer 3s ease-in-out infinite;
+    background-size: 200% 200%;
+  }
+  
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-700 ease-out hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/30;
+  }
+  
+  .image-enhance {
+    @apply transition-all duration-700;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  .image-enhance:hover {
+    filter: brightness(1.1) contrast(1.15) saturate(1.2) !important;
+  }
+  
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
