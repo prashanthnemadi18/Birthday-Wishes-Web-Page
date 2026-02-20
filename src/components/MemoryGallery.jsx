@@ -67,6 +67,15 @@ const memories = [
     captionIcons: [Gift, Heart, Sparkles]
   },
   {
+    image: 'sister baby.jpeg',
+    title: 'Precious Little Angel',
+    caption: 'The most beautiful moment - welcoming this tiny miracle into our family. A baby girl born to bring endless joy and love to our lives',
+    color: 'from-pink-400 to-rose-400',
+    icon: Baby,
+    year: 'New Life',
+    captionIcons: [Baby, Heart, Sparkles]
+  },
+  {
     image: 'love .jpeg',
     title: 'Love & Happiness',
     caption: 'This picture radiates pure love and joy! Your happiness is contagious. May your life always be filled with this much love and beautiful moments',
