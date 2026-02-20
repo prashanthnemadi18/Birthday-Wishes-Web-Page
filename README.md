@@ -2,6 +2,10 @@
 
 A beautiful, modern, and fully responsive birthday website built with React, Tailwind CSS, and Framer Motion.
 
+## 🌐 Live Demo
+
+**[View Live Website](https://birthday-wishes-web-page.vercel.app)** 🎂✨
+
 ## ✨ Features
 
 - 🎨 Modern dark theme with gradient animations
