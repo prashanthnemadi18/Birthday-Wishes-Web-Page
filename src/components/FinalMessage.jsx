@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { Gift, Balloon, Sparkles } from 'lucide-react'
 
 export default function FinalMessage({ setCurrentSection }) {
   const [confetti, setConfetti] = useState([])
@@ -90,11 +91,39 @@ export default function FinalMessage({ setCurrentSection }) {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.9 }}
-          className="text-5xl sm:text-7xl mb-6 sm:mb-8 space-x-2 sm:space-x-4"
+          className="flex justify-center items-center gap-4 sm:gap-6 mb-6 sm:mb-8"
         >
-          <motion.span animate={{ y: [0, -20, 0] }} transition={{ duration: 1, repeat: Infinity }}>🎁</motion.span>
-          <motion.span animate={{ y: [0, -20, 0] }} transition={{ duration: 1, repeat: Infinity, delay: 0.2 }}>🎈</motion.span>
-          <motion.span animate={{ y: [0, -20, 0] }} transition={{ duration: 1, repeat: Infinity, delay: 0.4 }}>✨</motion.span>
+          <motion.div
+            animate={{ 
+              y: [0, -20, 0],
+              rotate: [0, 10, -10, 0]
+            }} 
+            transition={{ duration: 2, repeat: Infinity }}
+            className="text-pink-400"
+          >
+            <Gift className="w-12 h-12 sm:w-16 sm:h-16" strokeWidth={2} fill="currentColor" />
+          </motion.div>
+          <motion.div
+            animate={{ 
+              y: [0, -25, 0],
+              rotate: [0, -10, 10, 0]
+            }} 
+            transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
+            className="text-red-400"
+          >
+            <Balloon className="w-12 h-12 sm:w-16 sm:h-16" strokeWidth={2} fill="currentColor" />
+          </motion.div>
+          <motion.div
+            animate={{ 
+              y: [0, -20, 0],
+              rotate: [0, 180, 360],
+              scale: [1, 1.2, 1]
+            }} 
+            transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
+            className="text-yellow-300"
+          >
+            <Sparkles className="w-12 h-12 sm:w-16 sm:h-16" strokeWidth={2} fill="currentColor" />
+          </motion.div>
         </motion.div>
 
         <motion.button

@@ -86,10 +86,39 @@ export default function MemoryCard({ memory, index, isLeft }) {
           whileInView={{ scale: 1, rotate: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: index * 0.1 + 0.4, type: 'spring' }}
-          whileHover={{ scale: 1.2, rotate: 360 }}
           className="absolute top-2 right-2 sm:top-4 sm:right-4 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 flex items-center justify-center shadow-xl cursor-pointer"
         >
-          <memory.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" strokeWidth={2.5} />
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              rotate: [0, 360],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          >
+            <memory.icon 
+              className="w-6 h-6 sm:w-8 sm:h-8 text-white" 
+              strokeWidth={2.5}
+              fill="currentColor"
+            />
+          </motion.div>
+          
+          {/* Pulsing Ring */}
+          <motion.div
+            className="absolute inset-0 rounded-full border-2 border-white/50"
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.5, 0, 0.5],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeOut',
+            }}
+          />
         </motion.div>
 
         {/* Sparkle Effect on Hover */}
