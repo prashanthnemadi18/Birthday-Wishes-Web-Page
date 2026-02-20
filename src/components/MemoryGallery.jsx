@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import MemoryCard from './MemoryCard'
-import { Baby, Heart, Sparkles, Users, Church, Flower2, Flame, HeartHandshake, Shield, Smile, Star, Gift } from 'lucide-react'
+import { Baby, Heart, Sparkles, Users, Church, HeartHandshake, Star, Gift } from 'lucide-react'
 
 const memories = [
   {
@@ -19,7 +19,7 @@ const memories = [
     color: 'from-purple-500 to-pink-500',
     icon: Heart,
     year: 'Growing Up',
-    captionIcons: [Heart, Flower2, Sparkles]
+    captionIcons: [Heart, Sparkles, Heart]
   },
   {
     image: '1st iamge .jpeg',
@@ -28,7 +28,7 @@ const memories = [
     color: 'from-blue-500 to-purple-500',
     icon: Sparkles,
     year: 'Precious Moments',
-    captionIcons: [Sparkles, Heart, Shield]
+    captionIcons: [Sparkles, Heart, Sparkles]
   },
   {
     image: 'Bother and sister .jpeg',
@@ -37,7 +37,7 @@ const memories = [
     color: 'from-indigo-500 to-blue-500',
     icon: Users,
     year: 'Sibling Bond',
-    captionIcons: [Users, Heart, Shield]
+    captionIcons: [Users, Heart, Sparkles]
   },
   {
     image: 'akka.JPG',
@@ -65,24 +65,6 @@ const memories = [
     icon: Gift,
     year: 'New Blessing',
     captionIcons: [Gift, Heart, Sparkles]
-  },
-  {
-    image: 'simple.jpeg',
-    title: 'Simple Moments',
-    caption: 'Arguing is our hobby, loving each other is our nature',
-    color: 'from-rose-500 to-pink-500',
-    icon: Flower2,
-    year: 'Beautiful You',
-    captionIcons: [Smile, Heart, Flower2]
-  },
-  {
-    image: 'coolest image .jpeg',
-    title: 'The Cool Sister',
-    caption: 'Side by side, always and forever. My sister is my biggest blessing',
-    color: 'from-orange-500 to-pink-500',
-    icon: Flame,
-    year: 'Confidence',
-    captionIcons: [Flame, Heart, Sparkles]
   },
   {
     image: 'love .jpeg',
