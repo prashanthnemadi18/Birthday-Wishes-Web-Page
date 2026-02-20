@@ -20,7 +20,7 @@ export default function Navbar({ currentSection, setCurrentSection }) {
             >
               <div className="w-full h-full rounded-full overflow-hidden bg-black">
                 <img
-                  src="/childhood.jpeg"
+                  src="/sister baby.jpeg"
                   alt="Anjali"
                   className="w-full h-full object-cover"
                   style={{
