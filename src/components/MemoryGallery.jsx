@@ -10,7 +10,7 @@ const memories = [
     color: 'from-pink-500 to-rose-500',
     icon: Baby,
     year: 'Early Years',
-    captionIcons: [Heart, Shield, Sparkles]
+    captionIcons: [Heart, Sparkles, Heart]
   },
   {
     image: 'Mother-sister image.jpeg',
