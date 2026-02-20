@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import MemoryCard from './MemoryCard'
-import { Baby, Heart, Sparkles, Users, Church, Flower2, Flame, HeartHandshake, Shield, Smile, Star } from 'lucide-react'
+import { Baby, Heart, Sparkles, Users, Church, Flower2, Flame, HeartHandshake, Shield, Smile, Star, Gift } from 'lucide-react'
 
 const memories = [
   {
@@ -56,6 +56,15 @@ const memories = [
     icon: Church,
     year: 'Special Day',
     captionIcons: [Church, Heart, Sparkles]
+  },
+  {
+    image: 'baby shower.JPG',
+    title: 'Blessed Celebration',
+    caption: 'A new chapter of joy and blessings. Celebrating the beautiful journey of motherhood with love and happiness',
+    color: 'from-blue-400 to-pink-400',
+    icon: Gift,
+    year: 'New Blessing',
+    captionIcons: [Gift, Heart, Sparkles]
   },
   {
     image: 'simple.jpeg',
