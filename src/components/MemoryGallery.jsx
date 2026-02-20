@@ -1,47 +1,52 @@
 import { motion } from 'framer-motion'
 import MemoryCard from './MemoryCard'
-import { Baby, Heart, Sparkles, Users, Church, Flower2, Flame, HeartHandshake } from 'lucide-react'
+import { Baby, Heart, Sparkles, Users, Church, Flower2, Flame, HeartHandshake, Shield, Smile } from 'lucide-react'
 
 const memories = [
   {
     image: 'childhood.jpeg',
     title: 'Childhood Magic',
-    caption: 'This little girl grew into the most beautiful soul I know. I\'m so proud to call you my sister. I will always protect you ❤️',
+    caption: 'This little girl grew into the most beautiful soul I know. I\'m so proud to call you my sister. I will always protect you',
     color: 'from-pink-500 to-rose-500',
     icon: Baby,
-    year: 'Early Years'
+    year: 'Early Years',
+    captionIcons: [Heart, Shield, Sparkles]
   },
   {
     image: 'Mother-sister image.jpeg',
     title: 'Mom & Her Princess',
-    caption: 'Happy Birthday to the beautiful daughter of our strong mother ❤️ You make our family proud every single day',
+    caption: 'Happy Birthday to the beautiful daughter of our strong mother. You make our family proud every single day',
     color: 'from-purple-500 to-pink-500',
     icon: Heart,
-    year: 'Growing Up'
+    year: 'Growing Up',
+    captionIcons: [Heart, Flower2, Sparkles]
   },
   {
     image: '1st iamge .jpeg',
     title: 'First Memories',
-    caption: 'We don\'t show love all the time, but our bond is unbreakable. Lucky to have you as my sister.',
+    caption: 'We don\'t show love all the time, but our bond is unbreakable. Lucky to have you as my sister',
     color: 'from-blue-500 to-purple-500',
     icon: Sparkles,
-    year: 'Precious Moments'
+    year: 'Precious Moments',
+    captionIcons: [Sparkles, Heart, Shield]
   },
   {
     image: 'Bother and sister .jpeg',
     title: 'Partners in Crime',
-    caption: 'Different personalities, one heart, one family. My strength is standing right beside me.',
+    caption: 'Different personalities, one heart, one family. My strength is standing right beside me',
     color: 'from-indigo-500 to-blue-500',
     icon: Users,
-    year: 'Sibling Bond'
+    year: 'Sibling Bond',
+    captionIcons: [Users, Heart, Shield]
   },
   {
     image: 'marrege image .jpeg',
     title: 'New Beginnings',
-    caption: 'Seeing you start this new chapter makes me emotional and proud. May your life be filled with love, respect, and togetherness.',
+    caption: 'Seeing you start this new chapter makes me emotional and proud. May your life be filled with love, respect, and togetherness',
     color: 'from-pink-500 to-purple-500',
     icon: Church,
-    year: 'Special Day'
+    year: 'Special Day',
+    captionIcons: [Church, Heart, Sparkles]
   },
   {
     image: 'simple.jpeg',
@@ -49,7 +54,8 @@ const memories = [
     caption: 'Arguing is our hobby, loving each other is our nature',
     color: 'from-rose-500 to-pink-500',
     icon: Flower2,
-    year: 'Beautiful You'
+    year: 'Beautiful You',
+    captionIcons: [Smile, Heart, Flower2]
   },
   {
     image: 'coolest image .jpeg',
@@ -57,15 +63,17 @@ const memories = [
     caption: 'Side by side, always and forever. My sister is my biggest blessing',
     color: 'from-orange-500 to-pink-500',
     icon: Flame,
-    year: 'Confidence'
+    year: 'Confidence',
+    captionIcons: [Flame, Heart, Sparkles]
   },
   {
     image: 'love .jpeg',
     title: 'Love & Happiness',
-    caption: 'This picture radiates pure love and joy! Your happiness is contagious. May your life always be filled with this much love and beautiful moments! ❤️',
+    caption: 'This picture radiates pure love and joy! Your happiness is contagious. May your life always be filled with this much love and beautiful moments',
     color: 'from-red-500 to-pink-500',
     icon: HeartHandshake,
-    year: 'Forever Love'
+    year: 'Forever Love',
+    captionIcons: [Heart, HeartHandshake, Sparkles]
   }
 ]
 

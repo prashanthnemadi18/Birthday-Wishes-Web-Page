@@ -174,20 +174,47 @@ export default function MemoryCard({ memory, index, isLeft }) {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: index * 0.1 + 0.6, duration: 0.5 }}
-          className="text-2xl font-bold text-white mb-3 relative z-10 font-serif"
+          className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3 relative z-10 font-serif"
         >
           {memory.title}
         </motion.h3>
         
-        <motion.p
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: index * 0.1 + 0.7, duration: 0.5 }}
-          className="text-base text-white/95 leading-relaxed relative z-10 font-light"
-        >
-          {memory.caption}
-        </motion.p>
+        <div className="text-sm sm:text-base text-white/95 leading-relaxed relative z-10 font-light">
+          <motion.span
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 + 0.7, duration: 0.5 }}
+          >
+            {memory.caption}
+          </motion.span>
+          {' '}
+          {/* Animated Caption Icons */}
+          <span className="inline-flex gap-1 ml-1">
+            {memory.captionIcons.map((IconComponent, i) => (
+              <motion.span
+                key={i}
+                className="inline-block"
+                animate={{
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 15, -15, 0],
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  delay: i * 0.4,
+                  ease: 'easeInOut',
+                }}
+              >
+                <IconComponent 
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-white" 
+                  strokeWidth={2.5}
+                  fill="currentColor"
+                />
+              </motion.span>
+            ))}
+          </span>
+        </div>
 
         {/* Year Badge */}
         <motion.div
