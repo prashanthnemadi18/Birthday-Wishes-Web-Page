@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import MemoryCard from './MemoryCard'
-import { Baby, Heart, Sparkles, Users, Church, Flower2, Flame, HeartHandshake, Shield, Smile } from 'lucide-react'
+import { Baby, Heart, Sparkles, Users, Church, Flower2, Flame, HeartHandshake, Shield, Smile, Star } from 'lucide-react'
 
 const memories = [
   {
@@ -38,6 +38,15 @@ const memories = [
     icon: Users,
     year: 'Sibling Bond',
     captionIcons: [Users, Heart, Shield]
+  },
+  {
+    image: 'akka.JPG',
+    title: 'My Beautiful Akka',
+    caption: 'You shine brighter than any star. Your grace, your smile, your presence makes everything beautiful',
+    color: 'from-purple-500 to-indigo-500',
+    icon: Star,
+    year: 'Radiant Soul',
+    captionIcons: [Star, Heart, Sparkles]
   },
   {
     image: 'marrege image .jpeg',
