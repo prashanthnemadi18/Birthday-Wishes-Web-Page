@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { Gift, Balloon, Sparkles } from 'lucide-react'
+import { Gift, PartyPopper, Sparkles } from 'lucide-react'
 
 export default function FinalMessage({ setCurrentSection }) {
   const [confetti, setConfetti] = useState([])
@@ -111,7 +111,7 @@ export default function FinalMessage({ setCurrentSection }) {
             transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
             className="text-red-400"
           >
-            <Balloon className="w-12 h-12 sm:w-16 sm:h-16" strokeWidth={2} fill="currentColor" />
+            <PartyPopper className="w-12 h-12 sm:w-16 sm:h-16" strokeWidth={2} fill="currentColor" />
           </motion.div>
           <motion.div
             animate={{ 

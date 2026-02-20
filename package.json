@@ -1,6 +1,7 @@
 {
   "name": "anjali-birthday-portfolio",
   "version": "1.0.0",
+  "type": "module",
   "description": "Modern Birthday Portfolio for Anjali",
   "scripts": {
     "dev": "vite",
