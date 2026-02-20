@@ -90,8 +90,9 @@ export default function MemoryCard({ memory, index, isLeft }) {
         >
           <motion.div
             animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, 360],
+              scale: [1, 1.3, 0.9, 1.2, 1],
+              rotate: [0, -15, 15, -10, 0],
+              y: [0, -3, 3, -2, 0],
             }}
             transition={{
               duration: 3,
@@ -106,7 +107,7 @@ export default function MemoryCard({ memory, index, isLeft }) {
             />
           </motion.div>
           
-          {/* Pulsing Ring */}
+          {/* Pulsing Ring 1 */}
           <motion.div
             className="absolute inset-0 rounded-full border-2 border-white/50"
             animate={{
@@ -119,6 +120,60 @@ export default function MemoryCard({ memory, index, isLeft }) {
               ease: 'easeOut',
             }}
           />
+          
+          {/* Pulsing Ring 2 - Delayed */}
+          <motion.div
+            className="absolute inset-0 rounded-full border-2 border-pink-300/50"
+            animate={{
+              scale: [1, 1.8, 1],
+              opacity: [0.4, 0, 0.4],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeOut',
+              delay: 0.5,
+            }}
+          />
+          
+          {/* Rotating Sparkles Around Badge */}
+          {[0, 120, 240].map((angle, i) => (
+            <motion.div
+              key={i}
+              className="absolute"
+              style={{
+                left: '50%',
+                top: '50%',
+              }}
+              animate={{
+                rotate: [angle, angle + 360],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+            >
+              <motion.div
+                className="text-white text-xs sm:text-sm"
+                style={{
+                  transform: 'translate(-50%, -50%)',
+                  marginLeft: '30px',
+                }}
+                animate={{
+                  scale: [0.8, 1.2, 0.8],
+                  opacity: [0.6, 1, 0.6],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  delay: i * 0.3,
+                }}
+              >
+                ✨
+              </motion.div>
+            </motion.div>
+          ))}
         </motion.div>
 
         {/* Sparkle Effect on Hover */}
