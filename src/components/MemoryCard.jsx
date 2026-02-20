@@ -189,39 +189,12 @@ export default function MemoryCard({ memory, index, isLeft }) {
           {memory.caption}
         </motion.p>
 
-        {/* Animated Symbols */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: index * 0.1 + 0.8, duration: 0.5 }}
-          className="flex gap-2 sm:gap-3 mt-3 sm:mt-4 justify-center relative z-10"
-        >
-          {memory.symbols.map((symbol, i) => (
-            <motion.span
-              key={i}
-              className="text-2xl sm:text-3xl"
-              animate={{
-                y: [0, -10, 0],
-                rotate: [0, 10, -10, 0],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                delay: i * 0.2,
-              }}
-            >
-              {symbol}
-            </motion.span>
-          ))}
-        </motion.div>
-
         {/* Year Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: index * 0.1 + 0.9, type: 'spring' }}
+          transition={{ delay: index * 0.1 + 0.8, type: 'spring' }}
           whileHover={{ scale: 1.1 }}
           className="mt-4 inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold text-white relative z-10 cursor-pointer"
         >

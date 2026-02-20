@@ -9,8 +9,7 @@ const memories = [
     caption: 'This little girl grew into the most beautiful soul I know. I\'m so proud to call you my sister. I will always protect you ❤️',
     color: 'from-pink-500 to-rose-500',
     icon: Baby,
-    year: 'Early Years',
-    symbols: ['🧸', '👶', '💕', '✨']
+    year: 'Early Years'
   },
   {
     image: 'Mother-sister image.jpeg',
@@ -18,8 +17,7 @@ const memories = [
     caption: 'Happy Birthday to the beautiful daughter of our strong mother ❤️ You make our family proud every single day',
     color: 'from-purple-500 to-pink-500',
     icon: Heart,
-    year: 'Growing Up',
-    symbols: ['👩‍👧', '💝', '🌸', '💖']
+    year: 'Growing Up'
   },
   {
     image: '1st iamge .jpeg',
@@ -27,8 +25,7 @@ const memories = [
     caption: 'We don\'t show love all the time, but our bond is unbreakable. Lucky to have you as my sister.',
     color: 'from-blue-500 to-purple-500',
     icon: Sparkles,
-    year: 'Precious Moments',
-    symbols: ['⭐', '✨', '💫', '🌟']
+    year: 'Precious Moments'
   },
   {
     image: 'Bother and sister .jpeg',
@@ -36,8 +33,7 @@ const memories = [
     caption: 'Different personalities, one heart, one family. My strength is standing right beside me.',
     color: 'from-indigo-500 to-blue-500',
     icon: Users,
-    year: 'Sibling Bond',
-    symbols: ['👫', '🤝', '💪', '❤️']
+    year: 'Sibling Bond'
   },
   {
     image: 'marrege image .jpeg',
@@ -45,8 +41,7 @@ const memories = [
     caption: 'Seeing you start this new chapter makes me emotional and proud. May your life be filled with love, respect, and togetherness.',
     color: 'from-pink-500 to-purple-500',
     icon: Church,
-    year: 'Special Day',
-    symbols: ['💒', '💍', '👰', '💐']
+    year: 'Special Day'
   },
   {
     image: 'simple.jpeg',
@@ -54,8 +49,7 @@ const memories = [
     caption: 'Arguing is our hobby, loving each other is our nature',
     color: 'from-rose-500 to-pink-500',
     icon: Flower2,
-    year: 'Beautiful You',
-    symbols: ['🌺', '🌸', '💕', '😊']
+    year: 'Beautiful You'
   },
   {
     image: 'coolest image .jpeg',
@@ -63,8 +57,7 @@ const memories = [
     caption: 'Side by side, always and forever. My sister is my biggest blessing',
     color: 'from-orange-500 to-pink-500',
     icon: Flame,
-    year: 'Confidence',
-    symbols: ['😎', '🔥', '💯', '✌️']
+    year: 'Confidence'
   },
   {
     image: 'love .jpeg',
@@ -72,8 +65,7 @@ const memories = [
     caption: 'This picture radiates pure love and joy! Your happiness is contagious. May your life always be filled with this much love and beautiful moments! ❤️',
     color: 'from-red-500 to-pink-500',
     icon: HeartHandshake,
-    year: 'Forever Love',
-    symbols: ['💝', '❤️', '💖', '😍']
+    year: 'Forever Love'
   }
 ]
 
