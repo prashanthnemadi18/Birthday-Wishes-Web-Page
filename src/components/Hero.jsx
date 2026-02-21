@@ -13,24 +13,50 @@ export default function Hero({ setCurrentSection }) {
       
       <div className="text-center z-10 px-4">
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ type: 'spring', duration: 1.2, bounce: 0.4 }}
+          initial={{ scale: 0, opacity: 0, rotateX: -90, z: -200 }}
+          animate={{ scale: 1, opacity: 1, rotateX: 0, z: 0 }}
+          transition={{ type: 'spring', duration: 1.5, bounce: 0.4 }}
+          whileHover={{ 
+            scale: 1.05, 
+            rotateY: 5,
+            z: 30,
+            transition: { duration: 0.3 }
+          }}
+          style={{ 
+            transformStyle: 'preserve-3d',
+            perspective: '1000px'
+          }}
         >
-          <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold text-gradient mb-4 sm:mb-6 drop-shadow-2xl font-serif">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold text-gradient mb-4 sm:mb-6 drop-shadow-2xl font-serif"
+            style={{ transform: 'translateZ(50px)' }}
+          >
             Happy Birthday
           </h1>
         </motion.div>
 
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+          initial={{ y: 50, opacity: 0, rotateY: 90, z: -100 }}
+          animate={{ y: 0, opacity: 1, rotateY: 0, z: 0 }}
+          transition={{ delay: 0.5, duration: 1, type: 'spring' }}
+          whileHover={{ 
+            scale: 1.05,
+            rotateZ: 3,
+            z: 20,
+            transition: { duration: 0.3 }
+          }}
+          style={{ 
+            transformStyle: 'preserve-3d',
+            perspective: '1000px'
+          }}
         >
-          <h2 className="text-5xl sm:text-7xl md:text-9xl font-bold text-white mb-2 sm:mb-4 drop-shadow-lg font-script italic">
+          <h2 className="text-5xl sm:text-7xl md:text-9xl font-bold text-white mb-2 sm:mb-4 drop-shadow-lg font-script italic"
+            style={{ transform: 'translateZ(40px)' }}
+          >
             Akka! 🎉
           </h2>
-          <p className="text-2xl sm:text-3xl md:text-4xl text-pink-300 mb-6 sm:mb-8 font-script italic">
+          <p className="text-2xl sm:text-3xl md:text-4xl text-pink-300 mb-6 sm:mb-8 font-script italic"
+            style={{ transform: 'translateZ(30px)' }}
+          >
             (Anjali)
           </p>
         </motion.div>
@@ -45,14 +71,21 @@ export default function Hero({ setCurrentSection }) {
         </motion.p>
 
         <motion.button
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
+          initial={{ y: 50, opacity: 0, z: -100 }}
+          animate={{ y: 0, opacity: 1, z: 0 }}
+          transition={{ delay: 1.5, duration: 0.8, type: 'spring' }}
           whileHover={{ 
-            scale: 1.1, 
+            scale: 1.15, 
+            rotateX: 10,
+            rotateY: 5,
+            z: 50,
             boxShadow: '0 0 60px rgba(236, 72, 153, 0.8), 0 0 100px rgba(139, 92, 246, 0.5)' 
           }}
-          whileTap={{ scale: 0.95 }}
+          whileTap={{ scale: 0.9, z: 0 }}
+          style={{ 
+            transformStyle: 'preserve-3d',
+            perspective: '1000px'
+          }}
           onClick={() => setCurrentSection('gallery')}
           className="px-8 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white text-lg sm:text-2xl font-bold rounded-full shadow-2xl shadow-purple-500/50 transition-all duration-500 animate-pulse-slow"
         >

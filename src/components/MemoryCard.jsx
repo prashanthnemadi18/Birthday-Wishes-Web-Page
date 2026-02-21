@@ -3,10 +3,21 @@ import { motion } from 'framer-motion'
 export default function MemoryCard({ memory, index, isLeft }) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: isLeft ? -100 : 100, y: 50 }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      initial={{ opacity: 0, x: isLeft ? -100 : 100, y: 50, rotateY: isLeft ? -45 : 45, z: -100 }}
+      whileInView={{ opacity: 1, x: 0, y: 0, rotateY: 0, z: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8, delay: index * 0.1, ease: 'easeOut' }}
+      transition={{ duration: 1, delay: index * 0.1, ease: 'easeOut', type: 'spring' }}
+      whileHover={{ 
+        scale: 1.05, 
+        rotateY: isLeft ? 5 : -5,
+        rotateX: -5,
+        z: 50,
+        transition: { duration: 0.4 }
+      }}
+      style={{ 
+        transformStyle: 'preserve-3d',
+        perspective: '1000px'
+      }}
       className="glass rounded-3xl overflow-hidden card-hover relative group"
     >
       {/* Connecting Line Animation */}
@@ -44,22 +55,35 @@ export default function MemoryCard({ memory, index, isLeft }) {
 
       {/* Image Section */}
       <motion.div
-        whileHover={{ scale: 1.03 }}
+        whileHover={{ 
+          scale: 1.05,
+          rotateX: 5,
+          z: 30,
+          transition: { duration: 0.4 }
+        }}
+        style={{ transformStyle: 'preserve-3d' }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="relative overflow-hidden bg-gradient-to-br from-black/40 to-black/20"
       >
         <div className="w-full min-h-[300px] sm:min-h-[400px] max-h-[400px] sm:max-h-[500px] flex items-center justify-center p-2 sm:p-4">
           <motion.img
-            initial={{ scale: 1.2, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 1.2, opacity: 0, z: -50 }}
+            whileInView={{ scale: 1, opacity: 1, z: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.1 + 0.2 }}
-            whileHover={{ scale: 1.05, rotate: 1 }}
+            whileHover={{ 
+              scale: 1.08, 
+              rotateZ: 2,
+              z: 20,
+              transition: { duration: 0.4 }
+            }}
+            style={{ transformStyle: 'preserve-3d' }}
             src={`/${memory.image}`}
             alt={memory.title}
             className="w-full h-full object-contain image-enhance max-h-[380px] sm:max-h-[480px]"
             style={{
               filter: 'brightness(1.05) contrast(1.1) saturate(1.15)',
+              transformStyle: 'preserve-3d'
             }}
           />
         </div>
@@ -82,10 +106,17 @@ export default function MemoryCard({ memory, index, isLeft }) {
 
         {/* Animated Icon Badge */}
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          whileInView={{ scale: 1, rotate: 0 }}
+          initial={{ scale: 0, rotate: -180, z: -100 }}
+          whileInView={{ scale: 1, rotate: 0, z: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: index * 0.1 + 0.4, type: 'spring' }}
+          whileHover={{ 
+            scale: 1.2, 
+            rotateY: 360,
+            z: 50,
+            transition: { duration: 0.6 }
+          }}
+          style={{ transformStyle: 'preserve-3d' }}
           className="absolute top-2 right-2 sm:top-4 sm:right-4 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 flex items-center justify-center shadow-xl cursor-pointer"
         >
           <motion.div

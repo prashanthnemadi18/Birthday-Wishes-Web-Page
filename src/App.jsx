@@ -34,7 +34,12 @@ function App() {
   }, [])
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br ${gradients[bgGradient]} transition-all duration-2000 relative overflow-hidden`}>
+    <div className={`min-h-screen bg-gradient-to-br ${gradients[bgGradient]} transition-all duration-2000 relative overflow-hidden`}
+      style={{ 
+        perspective: '2000px',
+        transformStyle: 'preserve-3d'
+      }}
+    >
       {/* Floating Hearts */}
       <FloatingHearts />
       

@@ -115,13 +115,25 @@ export default function MemoryGallery({ setCurrentSection }) {
               <div key={index} className="relative">
                 {/* Timeline Icon */}
                 <motion.div
-                  initial={{ scale: 0, rotate: -180 }}
-                  whileInView={{ scale: 1, rotate: 0 }}
+                  initial={{ scale: 0, rotate: -180, z: -100 }}
+                  whileInView={{ scale: 1, rotate: 0, z: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1, type: 'spring' }}
+                  whileHover={{ 
+                    scale: 1.3, 
+                    rotateY: 360,
+                    z: 80,
+                    transition: { duration: 0.8 }
+                  }}
+                  style={{ 
+                    transformStyle: 'preserve-3d',
+                    perspective: '1000px'
+                  }}
                   className="absolute left-1/2 transform -translate-x-1/2 z-20 hidden lg:flex"
                 >
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 flex items-center justify-center shadow-2xl shadow-purple-500/50 animate-pulse-slow">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 flex items-center justify-center shadow-2xl shadow-purple-500/50 animate-pulse-slow"
+                    style={{ transform: 'translateZ(30px)' }}
+                  >
                     <memory.icon className="w-10 h-10 text-white" strokeWidth={2} />
                   </div>
                 </motion.div>
