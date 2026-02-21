@@ -77,7 +77,6 @@ export default function MemoryCard({ memory, index, isLeft }) {
               z: 20,
               transition: { duration: 0.4 }
             }}
-            style={{ transformStyle: 'preserve-3d' }}
             src={`/${memory.image}`}
             alt={memory.title}
             className="w-full h-full object-contain image-enhance max-h-[380px] sm:max-h-[480px]"
