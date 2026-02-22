@@ -4,7 +4,16 @@ import { Baby, Heart, Sparkles, Users, Church, HeartHandshake, Star, Gift } from
 
 const memories = [
   {
-    image: 'childhood.jpeg',
+    image: '1st baby image.jpeg',
+    title: 'First Baby Moments',
+    caption: 'The sweetest little angel bringing joy to our family. These precious early moments will forever be treasured in our hearts',
+    color: 'from-rose-400 to-pink-500',
+    icon: Baby,
+    year: 'Baby Days',
+    captionIcons: [Baby, Heart, Sparkles]
+  },
+  {
+    image: 'hello.jpeg',
     title: 'Childhood Magic',
     caption: 'This little girl grew into the most beautiful soul I know. I\'m so proud to call you my sister. I will always protect you',
     color: 'from-pink-500 to-rose-500',
